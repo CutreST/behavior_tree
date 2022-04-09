@@ -1,0 +1,6 @@
+<Project Sdk="Godot.NET.Sdk/3.3.0">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <RootNamespace>BehaviorTree</RootNamespace>
+  </PropertyGroup>
+</Project>
