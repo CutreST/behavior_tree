@@ -19,7 +19,7 @@ namespace BehaviorTree.Base
         {
 
             Debug.Assert((Children != null || Children.Count > 0), "There must be, at least, one child");
-
+            GD.Print("Entered a sequence node!");
             for (byte i = Index; i < Children.Count; i++)
             {
                 controller.EnterNode(Children[i]);
