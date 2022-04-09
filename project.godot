@@ -11,6 +11,7 @@ config_version=4
 [application]
 
 config/name="Behavior Tree"
+run/main_scene="res://Scenes/Behaviour Tree.tscn"
 config/icon="res://icon.png"
 
 [physics]

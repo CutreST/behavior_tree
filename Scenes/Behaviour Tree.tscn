@@ -1,3 +1,32 @@
-[gd_scene format=2]
+[gd_scene load_steps=5 format=2]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource path="res://Scripts/Behavior Tree/Base/TestNode.cs" type="Script" id=1]
+[ext_resource path="res://Scripts/Behavior Tree/Base/TreeController.cs" type="Script" id=2]
+[ext_resource path="res://Scripts/Behavior Tree/Base/SequenceNode.cs" type="Script" id=3]
+[ext_resource path="res://Scripts/Behavior Tree/Base/TestNode2.cs" type="Script" id=4]
+
+[node name="TreeController" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="SequenceTest" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="Success" type="Node" parent="SequenceTest"]
+script = ExtResource( 1 )
+NodeState = 1
+
+[node name="Success2" type="Node" parent="SequenceTest"]
+script = ExtResource( 1 )
+NodeState = 1
+
+[node name="Running" type="Node" parent="SequenceTest"]
+script = ExtResource( 4 )
+countLimit = 500
+
+[node name="Success4" type="Node" parent="SequenceTest"]
+script = ExtResource( 1 )
+NodeState = 1
+
+[node name="Success5" type="Node" parent="SequenceTest"]
+script = ExtResource( 1 )
+NodeState = 1
